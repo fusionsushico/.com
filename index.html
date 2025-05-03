@@ -8,38 +8,32 @@
     body, html {
       height: 100%;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: #fff;
     }
 
     .landing-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('images/fusion-landing.png') no-repeat center center;
+      background-size: cover;  /* ✅ fills the screen, may crop a little */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
-      width: 100%;
-    }
-
-    .logo {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
     }
   </style>
 </head>
 <body>
 
-  <div class="landing-container">
-    <img src="images/fusion_sushi_header_logo.png" alt="Fusion Sushi Co." class="logo" />
-  </div>
+  <div class="landing-container"></div>
 
   <script>
-    // Redirect after 2 seconds
+    // Redirect after 3 seconds to your main page
     setTimeout(function() {
-      window.location.href = "main.html"; // Replace with your main page URL
-    }, 2000);
+      window.location.href = "main.html"; // ⚠️ Change 'main.html' to your actual main page file
+    }, 3000);
   </script>
 
 </body>
