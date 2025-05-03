@@ -1,0 +1,226 @@
+[
+  {
+    "name": "🌿 Classic Cucumber Sushi",
+    "price": 239,
+    "category": "Veggie Delights",
+    "description": "Cucumber, seasoned sushi rice, nori.",
+    "image": "classic-cucumber-sushi.jpg",
+    "calories": 140
+  },
+  {
+    "name": "🌿 Avocado Sushi",
+    "price": 299,
+    "category": "Veggie Delights",
+    "description": "Avocado, seasoned sushi rice, nori.",
+    "image": "avocado-sushi.jpg",
+    "calories": 180
+  },
+  {
+    "name": "🌿 Asparagus Avocado Sushi",
+    "price": 319,
+    "category": "Veggie Delights",
+    "description": "Asparagus, avocado, seasoned sushi rice, nori.",
+    "image": "asparagus-avocado-sushi.jpg",
+    "calories": 190
+  },
+  {
+    "name": "🌿 Veggie Rainbow Sushi",
+    "price": 279,
+    "category": "Veggie Delights",
+    "description": "Bell peppers, carrots, cucumber, avocado, sesame seeds, seasoned sushi rice, nori.",
+    "image": "veggie-rainbow-sushi.jpg",
+    "calories": 200
+  },
+  {
+    "name": "🌿 Spicy Mayo Veg Sushi",
+    "price": 279,
+    "category": "Veggie Delights",
+    "description": "Tempura-fried sweet potato, spicy mayo (with sriracha), seasoned sushi rice, nori.",
+    "image": "spicy-mayo-veg-sushi.jpg",
+    "calories": 220
+  },
+  {
+    "name": "🌿 Paneer Tikka Sushi",
+    "price": 349,
+    "category": "Fusion Rolls",
+    "description": "Grilled paneer tikka, cucumber, spicy mint mayo, seasoned sushi rice, nori.",
+    "image": "paneer-tikka-sushi.jpg",
+    "calories": 250
+  },
+  {
+    "name": "🌿 Spinach and Cheese Sushi",
+    "price": 289,
+    "category": "Fusion Rolls",
+    "description": "Wilted spinach, cream cheese, sesame seeds, seasoned sushi rice, nori.",
+    "image": "spinach-and-cheese-sushi.jpg",
+    "calories": 230
+  },
+  {
+    "name": "🌿 Tandoori Veg Sushi",
+    "price": 299,
+    "category": "Specialty Rolls",
+    "description": "Grilled tandoori vegetables, mint chutney, seasoned sushi rice, nori.",
+    "image": "tandoori-veg-sushi.jpg",
+    "calories": 240
+  },
+  {
+    "name": "🌿 Sweet and Spicy Sushi",
+    "price": 299,
+    "category": "Specialty Rolls",
+    "description": "Pickled carrots, mango slices, chili flakes, seasoned sushi rice, nori.",
+    "image": "sweet-and-spicy-sushi.jpg",
+    "calories": 190
+  },
+  {
+    "name": "🌿 Sesame Tofu Sushi",
+    "price": 349,
+    "category": "Specialty Rolls",
+    "description": "Marinated and pan-fried tofu, sesame seeds, cucumber, seasoned sushi rice, nori.",
+    "image": "sesame-tofu-sushi.jpg",
+    "calories": 210
+  },
+  {
+    "name": "🐟 Classic Salmon Sushi",
+    "price": 459,
+    "category": "Non-Vegetarian Sushi",
+    "description": "Grilled salmon, cucumber, seasoned sushi rice, nori, sesame seeds.",
+    "image": "classic-salmon-sushi.jpg",
+    "calories": 210
+  },
+  {
+    "name": "🐟 Spicy Tuna Sushi",
+    "price": 399,
+    "category": "Non-Vegetarian Sushi",
+    "description": "Tuna, spicy mayo, cucumber, seasoned sushi rice, nori.",
+    "image": "spicy-tuna-sushi.jpg",
+    "calories": 230
+  },
+  {
+    "name": "🍗 Chicken Teriyaki Sushi",
+    "price": 359,
+    "category": "Non-Vegetarian Sushi",
+    "description": "Teriyaki chicken, avocado, seasoned sushi rice, nori, sesame seeds.",
+    "image": "chicken-teriyaki-sushi.jpg",
+    "calories": 260
+  },
+  {
+    "name": "🐟 Shrimp Tempura Sushi",
+    "price": 399,
+    "category": "Non-Vegetarian Sushi",
+    "description": "Tempura-fried shrimp, cucumber, avocado, seasoned sushi rice, nori.",
+    "image": "shrimp-tempura-sushi.jpg",
+    "calories": 280
+  },
+  {
+    "name": "🌿 Veggie Lite Box",
+    "price": 279,
+    "category": "Mini Sushi Boxes",
+    "description": "2 pcs Cucumber, 2 pcs Avocado, 2 pcs Veggie Rainbow",
+    "image": "veggie-lite-box.jpg",
+    "calories": 210
+  },
+  {
+    "name": "🌿 Desi Fusion Box",
+    "price": 319,
+    "category": "Mini Sushi Boxes",
+    "description": "2 pcs Paneer Tikka, 2 pcs Spicy Mayo Veg, 2 pcs Tandoori Veg",
+    "image": "desi-fusion-box.jpg",
+    "calories": 260
+  },
+  {
+    "name": "🌿 Creamy & Crunchy Box",
+    "price": 299,
+    "category": "Mini Sushi Boxes",
+    "description": "2 pcs Spinach & Cheese, 2 pcs Sweet & Spicy, 2 pcs Avocado",
+    "image": "creamy-and-crunchy-box.jpg",
+    "calories": 230
+  },
+  {
+    "name": "🌿 Signature Veg Box",
+    "price": 299,
+    "category": "Mini Sushi Boxes",
+    "description": "2 pcs Asparagus Avocado, 2 pcs Spicy Mayo Veg, 2 pcs Cucumber",
+    "image": "signature-veg-box.jpg",
+    "calories": 220
+  },
+  {
+    "name": "🍗 Non-Veg Sushi Box",
+    "price": 399,
+    "category": "Mini Sushi Boxes",
+    "description": "2 pcs Salmon, 2 pcs Chicken Teriyaki, 2 pcs Spicy Tuna",
+    "image": "non-veg-sushi-box.jpg",
+    "calories": 270
+  },
+  {
+    "name": "🌿 Edamame with Sea Salt",
+    "price": 200,
+    "category": "Sides",
+    "description": "edamame",
+    "image": "edamame-with-sea-salt.jpg",
+    "calories": 120
+  },
+  {
+    "name": "🍗 Classic Buldak Fire Bowl",
+    "price": 359,
+    "category": "Ramen Bowls",
+    "description": "The original Buldak spicy chicken ramen, topped with shredded chicken, sesame seeds, and nori.",
+    "image": "classic-buldak-fire-bowl.jpg",
+    "calories": "Approx. 700–800 kcal"
+  },
+  {
+    "name": "🍗 Cheesy Buldak Ramen",
+    "price": 359,
+    "category": "Ramen Bowls",
+    "description": "Spicy Buldak noodles with mozzarella and cheddar cheese, garnished with green onions.",
+    "image": "cheesy-buldak-ramen.jpg",
+    "calories": "Approx. 700–800 kcal"
+  },
+  {
+    "name": "🍗 Egg Lava Buldak Bowl",
+    "price": 299,
+    "category": "Ramen Bowls",
+    "description": "Buldak noodles topped with a soft-boiled soy-marinated egg and sesame seeds.",
+    "image": "egg-lava-buldak-bowl.jpg",
+    "calories": "Approx. 700–800 kcal"
+  },
+  {
+    "name": "🍗 Creamy Carbonara Buldak",
+    "price": 349,
+    "category": "Ramen Bowls",
+    "description": "Carbonara noodles with creamy sauce, parmesan, and crispy chicken bacon bits.",
+    "image": "creamy-carbonara-buldak.jpg",
+    "calories": "Approx. 700–800 kcal"
+  },
+  {
+    "name": "🌿 Kimchi Buldak Explosion",
+    "price": 319,
+    "category": "Ramen Bowls",
+    "description": "Ramen topped with stir-fried kimchi, sesame oil, and a fried egg.",
+    "image": "kimchi-buldak-explosion.jpg",
+    "calories": "Approx. 600–700 kcal"
+  },
+  {
+    "name": "🌿 Veggie Delight Buldak Bowl",
+    "price": 299,
+    "category": "Ramen Bowls",
+    "description": "Vegetarian ramen with mushrooms, bell peppers, bok choy, and tofu.",
+    "image": "veggie-delight-buldak-bowl.jpg",
+    "calories": "Approx. 600–700 kcal"
+  },
+  {
+    "name": "🍗 Tandoori Chicken Buldak Ramen",
+    "price": 359,
+    "category": "Ramen Bowls",
+    "description": "Buldak noodles with grilled tandoori chicken and coriander.",
+    "image": "tandoori-chicken-buldak-ramen.jpg",
+    "calories": "Approx. 700–800 kcal"
+  },
+  {
+    "name": "🍗 Butter Garlic Buldak Bowl",
+    "price": 359,
+    "category": "Ramen Bowls",
+    "description": "Buldak noodles in garlic butter sauce, crispy garlic chips, and parmesan.",
+    "image": "butter-garlic-buldak-bowl.jpg",
+    "calories": "Approx. 700–800 kcal"
+  }
+]

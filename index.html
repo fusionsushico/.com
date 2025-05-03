@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fusion Sushi Co.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="header sticky top-0 bg-white shadow z-50">
+    <div class="container flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="images/fusion_sushi_header_logo.png" alt="Fusion Sushi Co." class="header-logo">
+      </div>
+      <div class="cart-icon-desktop cursor-pointer" id="desktop-cart-btn">
+        🛒 <span id="cart-count-desktop">0</span>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Clean Hero Slider -->
+<section class="relative w-full h-80 rounded-xl overflow-hidden shadow-lg mb-6">
+  <div class="slider-wrapper flex w-[300%] animate-slide">
+    <div class="relative w-full h-80">
+      <img src="images/hero1.jpg" alt="Fusion Sushi 1" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center p-4">
+        <h1 class="text-4xl font-bold text-white mb-2">Fresh. Fusion. Fantastic.</h1>
+        <p class="text-lg text-white mb-4">Handcrafted sushi & ramen, just for you</p>
+        <a href="#menu-section" class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full shadow hover:bg-yellow-300 transition">
+          🍣 Explore Menu
+        </a>
+      </div>
+    </div>
+
+    <div class="relative w-full h-80">
+      <img src="images/hero2.jpg" alt="Fusion Sushi 2" class="w-full h-full object-cover">
+    </div>
+
+    <div class="relative w-full h-80">
+      <img src="images/hero3.jpg" alt="Fusion Sushi 3" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <div class="absolute bottom-4 right-4 bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded-full shadow">
+    Flat 20% Off — Orders ₹500+
+  </div>
+</section>
+
+  <!-- Sushi/Ramen Toggle -->
+  <section class="menu-toggle flex gap-2 justify-center py-4 border-b">
+    <button id="showSushi" class="toggle-btn active">🍣 Sushi Menu</button>
+    <button id="showRamen" class="toggle-btn">🍜 Ramen Menu</button>
+  </section>
+
+  <!-- Product Section -->
+  <main id="menu-section" class="p-4">
+    <div id="product-list" class="grid gap-4"></div>
+  </main>
+
+  <!-- Floating Menu Button -->
+  <button id="menu-fab">🍱 MENU</button>
+
+  <!-- Slide-in Cart Panel -->
+  <aside id="cart-panel">
+    <div class="cart-header">
+      <h3>Fusion Cart</h3>
+      <button id="close-cart" class="text-red-500 font-bold">Close ❌</button>
+    </div>
+    <div id="cart-items" class="cart-body"></div>
+    <p class="cart-total">Grand Total: ₹<span id="cart-total">0</span></p>
+    <p>Total Items: <span id="cart-count-text">0</span></p>
+    <button id="clear-cart" class="clear-cart-btn">Clear Cart</button>
+    <div class="order-fields">
+      <input type="text" id="name-and-phone-number" placeholder="Name and Phone Number" />
+      <input type="text" id="table-number-or-address" placeholder="Table Number or Address" />
+    </div>
+    <a id="whatsapp-order" target="_blank" class="whatsapp-btn">Place Order via WhatsApp</a>
+  </aside>
+
+  <!-- Sticky View Cart Bar (Mobile) -->
+  <div id="view-cart-bar">
+    <span id="cart-bar-text">0 items added</span>
+    <button id="view-cart-btn">VIEW CART</button>
+  </div>
+
+  <!-- Preview Modal -->
+  <div id="preview-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal">❌</button>
+      <img id="modal-image" src="" alt="Product Preview" />
+      <h3 id="modal-name" class="text-lg font-bold"></h3>
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+      <p id="modal-calories"></p>
+      <button id="modal-add-to-cart">➕ Add to Cart</button>
+      <a href="#menu-section" id="back-to-menu">← Back to Menu</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-gray-100 text-sm">
+    <p>📍 Fusion Sushi Co., Mafco Market, Sec.-18, Vashi</p>
+    <p>📱 WhatsApp Orders: <a href="https://wa.me/919867378209" target="_blank">+91 9867378209</a></p>
+  </footer>
+</body>
+</html>
