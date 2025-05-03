@@ -257,20 +257,6 @@ footer {
   font-weight: bold;  /* makes the text bold */
 }
 
-.landing-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('images/fusion-landing.png') no-repeat center center;
-  background-size: 60%; /* adjust % as needed (try 60–80%) */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-}
-
 .cart-icon-desktop {
   font-size: 2.2rem;  /* makes 🛒 icon bigger */
   cursor: pointer;
