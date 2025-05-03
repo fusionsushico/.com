@@ -18,7 +18,7 @@ button {
 
 /* Header logo */
 .header-logo {
-  height: 45px;
+  height: 60px;
   width: auto;
   image-rendering: -webkit-optimize-contrast;
   filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
@@ -253,7 +253,8 @@ footer {
   background: #f5f5f5;
   padding: 1rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: bold;  /* makes the text bold */
 }
 
 .landing-page {
@@ -269,5 +270,27 @@ footer {
   align-items: center;
   background-color: #fff;  /* White fallback background */
 }
+
+.cart-icon-desktop {
+  font-size: 2.2rem;  /* makes 🛒 icon bigger */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon-desktop span {
+  font-size: 1.2rem;  /* makes count number a bit bigger */
+  margin-left: 6px;   /* adds space between icon and count */
+}
+
+#view-cart-bar button {
+  font-size: 0.8rem;  /* makes VIEW CART button text bigger on mobile */
+  font-weight: bold;  /* makes the text bold */
+}
+
+#menu-fab {
+  font-size: 0.8rem;  /* makes floating MENU button icon bigger on mobile */
+}
+
 
 
