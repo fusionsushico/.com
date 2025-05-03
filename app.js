@@ -120,27 +120,34 @@ function setupButtons() {
   document.getElementById('menu-fab').onclick = () => {
     document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
   };
-
-  // WhatsApp order button functionality
+  
+// WhatsApp order button functionality
 document.getElementById('whatsapp-order').onclick = () => {
   const name = document.getElementById('name-and-phone-number').value;
   const address = document.getElementById('table-number-or-address').value;
+  
+  // Check if name and address are filled in
+  if (!name || !address) {
+    alert("Please provide both name and address to place an order.");
+    return; // Prevent the order if fields are empty
+  }
+  
   let message = 'Order from Fusion Sushi Co.\n';
   let total = 0;
   
-  // Loop through cart to create the message with item details
+  // Loop through the cart to build the order message
   for (let key in cart) {
     const item = cart[key];
     message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
     total += item.qty * item.price;
   }
-
-  // Add the total and customer details
+  
   message += `\n\nTotal: ₹${total}`;
-  message += `\n\nName: ${name || '______'}\nAddress: ${address || '______'}`;
-
-  // Encode the message and generate the WhatsApp link
+  message += `\n\nName: ${name}\nAddress: ${address}`;
+  
   const encoded = encodeURIComponent(message);
+  
+  // Set the WhatsApp link with the message
   document.getElementById('whatsapp-order').href = `https://wa.me/919867378209?text=${encoded}`;
 };
 }
