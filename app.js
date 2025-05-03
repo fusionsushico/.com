@@ -121,21 +121,28 @@ function setupButtons() {
     document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
   };
 
-  document.getElementById('whatsapp-order').onclick = () => {
-    const name = document.getElementById('name').value;
-    const address = document.getElementById('table-no-or-address').value;
-    let message = 'Order from Fusion Sushi Co.\n';
-    let total = 0;
-    for (let key in cart) {
-      const item = cart[key];
-      message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
-      total += item.qty * item.price;
-    }
-    message += `\n\nTotal: ₹${total}`;
-    message += `\n\nName: ${name || '______'}\nAddress: ${address || '______'}`;
-    const encoded = encodeURIComponent(message);
-    document.getElementById('whatsapp-order').href = `https://wa.me/919867378209?text=${encoded}`;
-  };
+  // WhatsApp order button functionality
+document.getElementById('whatsapp-order').onclick = () => {
+  const name = document.getElementById('name-and-phone-number').value;
+  const address = document.getElementById('table-number-or-address').value;
+  let message = 'Order from Fusion Sushi Co.\n';
+  let total = 0;
+  
+  // Loop through cart to create the message with item details
+  for (let key in cart) {
+    const item = cart[key];
+    message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
+    total += item.qty * item.price;
+  }
+
+  // Add the total and customer details
+  message += `\n\nTotal: ₹${total}`;
+  message += `\n\nName: ${name || '______'}\nAddress: ${address || '______'}`;
+
+  // Encode the message and generate the WhatsApp link
+  const encoded = encodeURIComponent(message);
+  document.getElementById('whatsapp-order').href = `https://wa.me/919867378209?text=${encoded}`;
+};
 }
 
 function setActiveTab(id) {
