@@ -258,17 +258,17 @@ footer {
 }
 
 .landing-page {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: url('images/fusion-landing.png') no-repeat center center;
-  background-size: cover;  /* Ensures logo covers the whole screen */
+  background-size: 60%; /* adjust % as needed (try 60–80%) */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;  /* White fallback background */
+  background-color: #fff;
 }
 
 .cart-icon-desktop {
