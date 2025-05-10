@@ -1,4 +1,4 @@
-// Fusion Sushi Co. - app.js
+// Fusion Sushi Co. - app.js (Updated for Salad)
 
 let cart = {};
 let allProducts = [];
@@ -13,8 +13,8 @@ fetch('menu.json')
       cart = JSON.parse(savedCart);
     }
 
-    displayProducts('Sushi');
-    updateCart();   // ✅ ensures cart and quantities are shown after refresh
+    displayProducts('Sushi');  // default view
+    updateCart();              // ✅ ensures cart and quantities are shown after refresh
     setupButtons();
   });
 
@@ -22,9 +22,15 @@ function displayProducts(filterCategory) {
   const productList = document.getElementById('product-list');
   productList.innerHTML = '';
 
-  const filtered = allProducts.filter(item =>
-    filterCategory === 'Sushi' ? item.category !== 'Ramen Bowls' : item.category === 'Ramen Bowls'
-  );
+  let filtered;
+  if (filterCategory === 'Sushi') {
+    // Show everything that's NOT Ramen or Salads
+    filtered = allProducts.filter(item => item.category !== 'Ramen Bowls' && item.category !== 'Salads');
+  } else if (filterCategory === 'Ramen') {
+    filtered = allProducts.filter(item => item.category === 'Ramen Bowls');
+  } else if (filterCategory === 'Salads') {
+    filtered = allProducts.filter(item => item.category === 'Salads');
+  }
 
   filtered.forEach(product => {
     const card = document.createElement('div');
@@ -58,8 +64,16 @@ function changeQty(name, delta) {
   if (cart[name].qty <= 0) delete cart[name];
 
   updateCart();
-  localStorage.setItem('fusionCart', JSON.stringify(cart));  // ✅ save to localStorage
-  displayProducts(document.getElementById('showSushi').classList.contains('active') ? 'Sushi' : 'Ramen');
+  localStorage.setItem('fusionCart', JSON.stringify(cart));
+
+  // 🔄 ✅ Detect active tab and reload correct category
+  let activeTab = 'Sushi';  // default fallback
+  if (document.getElementById('showSalad').classList.contains('active')) {
+    activeTab = 'Salads';
+  } else if (document.getElementById('showRamen').classList.contains('active')) {
+    activeTab = 'Ramen';
+  }
+  displayProducts(activeTab);
 }
 
 function updateCart() {
@@ -102,6 +116,11 @@ function setupButtons() {
     displayProducts('Ramen');
     setActiveTab('showRamen');
   };
+  // ✅ NEW Salad Button Logic
+  document.getElementById('showSalad').onclick = () => {
+    displayProducts('Salads');
+    setActiveTab('showSalad');
+  };
   document.getElementById('view-cart-btn').onclick = () => {
     document.getElementById('cart-panel').classList.add('active');
   };
@@ -113,48 +132,53 @@ function setupButtons() {
   };
   document.getElementById('clear-cart').onclick = () => {
     cart = {};
-    localStorage.removeItem('fusionCart');  // ✅ clear from localStorage
+    localStorage.removeItem('fusionCart');
     updateCart();
-    displayProducts('Sushi');
+    // 🔄 ✅ Detect active tab and reload correct category after clearing cart
+    let activeTab = 'Sushi';
+    if (document.getElementById('showSalad').classList.contains('active')) {
+      activeTab = 'Salads';
+    } else if (document.getElementById('showRamen').classList.contains('active')) {
+      activeTab = 'Ramen';
+    }
+    displayProducts(activeTab);
   };
   document.getElementById('menu-fab').onclick = () => {
     document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
   };
-  
-// WhatsApp order button functionality
-document.getElementById('whatsapp-order').onclick = () => {
-  const name = document.getElementById('name-and-phone-number').value;
-  const address = document.getElementById('table-number-or-address').value;
-  
-  // Check if name and address are filled in
-  if (!name || !address) {
-    alert("Please provide both name and address to place an order.");
-    return; // Prevent the order if fields are empty
-  }
-  
-  let message = 'Order from Fusion Sushi Co.\n';
-  let total = 0;
-  
-  // Loop through the cart to build the order message
-  for (let key in cart) {
-    const item = cart[key];
-    message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
-    total += item.qty * item.price;
-  }
-  
-  message += `\n\nTotal: ₹${total}`;
-  message += `\n\nName: ${name}\nAddress: ${address}`;
-  
-  const encoded = encodeURIComponent(message);
-  
-  // Set the WhatsApp link with the message
-  document.getElementById('whatsapp-order').href = `https://wa.me/919867378209?text=${encoded}`;
-};
+
+  // WhatsApp order button functionality
+  document.getElementById('whatsapp-order').onclick = () => {
+    const name = document.getElementById('name-and-phone-number').value;
+    const address = document.getElementById('table-number-or-address').value;
+
+    if (!name || !address) {
+      alert("Please provide both name and address to place an order.");
+      return;
+    }
+
+    let message = 'Order from Fusion Sushi Co.\n';
+    let total = 0;
+
+    for (let key in cart) {
+      const item = cart[key];
+      message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
+      total += item.qty * item.price;
+    }
+
+    message += `\n\nTotal: ₹${total}`;
+    message += `\n\nName: ${name}\nAddress: ${address}`;
+
+    const encoded = encodeURIComponent(message);
+
+    document.getElementById('whatsapp-order').href = `https://wa.me/919867378209?text=${encoded}`;
+  };
 }
 
 function setActiveTab(id) {
   document.getElementById('showSushi').classList.remove('active');
   document.getElementById('showRamen').classList.remove('active');
+  document.getElementById('showSalad').classList.remove('active');
   document.getElementById(id).classList.add('active');
 }
 
