@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fusion Sushi Co. - Landing Page</title>
   <style>
     body, html {
       height: 100%;
       margin: 0;
-      background-color: #fff;
+      font-family: Arial, sans-serif;
     }
 
     .landing-container {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('images/fusion-landing.png') no-repeat center center;
-      background-size: cover;  /* ✅ fills the screen, may crop a little */
+      background: linear-gradient(135deg, #fde68a, #fcd5ce, #bbf7d0);
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .landing-banner {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .loading-text {
+      position: absolute;
+      bottom: 40px;
+      font-size: 1rem;
+      color: #555;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0.5;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="landing-container"></div>
+  <div class="landing-container">
+    <img src="images/fusion-landing.png" alt="Fusion Sushi Co." class="landing-banner">
+    <div class="loading-text">Loading...</div>
+  </div>
 
   <script>
-    // Redirect after 3 seconds to your main page
     setTimeout(function() {
-      window.location.href = "main.html"; // ⚠️ Change 'main.html' to your actual main page file
+      window.location.href = "main.html"; // Change to your main page
     }, 3000);
   </script>
-
 </body>
 </html>
