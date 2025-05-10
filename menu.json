@@ -222,5 +222,54 @@
     "description": "Buldak noodles in garlic butter sauce, crispy garlic chips, and parmesan.",
     "image": "butter-garlic-buldak-bowl.jpg",
     "calories": "Approx. 700–800 kcal"
+  },
+
+  {
+    "name": "🍗 Asian Chicken Crunch Salad",
+    "price": 270,
+    "category": "Salads",
+    "description": "Grilled chicken strips, shredded cabbage, carrots, lettuce, toasted sesame seeds, roasted peanut, and soya-sesame-ginger dressing.",
+    "image": "asian-chicken-crunch-salad.jpg",
+    "calories": 410
+  },
+  {
+    "name": "🥗 Thai Mango Salad Veg",
+    "price": 240,
+    "category": "Salads",
+    "description": "Raw mango, carrots, bell peppers, crushed peanuts, fresh coriander, chili, and Thai lime dressing.",
+    "image": "thai-mango-salad-veg.jpg",
+    "calories": 320
+  },
+  {
+    "name": "🥗 Sesame Tofu Salad",
+    "price": 250,
+    "category": "Salads",
+    "description": "Crispy tofu cubes, mixed greens, edamame, cucumber, sesame seeds, and soy-honey dressing.",
+    "image": "sesame-tofu-salad.jpg",
+    "calories": 370
+  },
+  {
+    "name": "🥗 Vietnamese Rice Paper Roll Salad Veg",
+    "price": 260,
+    "category": "Salads",
+    "description": "Rice paper rolls filled with lettuce, carrots, cucumber, mint, tofu, served with sweet chili dip.",
+    "image": "vietnamese-rice-paper-roll-salad-veg.jpg",
+    "calories": 300
+  },
+  {
+    "name": "🍗 Vietnamese Rice Paper Roll Salad (Chicken)",
+    "price": 260,
+    "category": "Salads",
+    "description": "Rice paper rolls filled with lettuce, carrots, cucumber, mint, chicken, served with sweet chili dip.",
+    "image": "vietnamese-rice-paper-roll-salad-chicken.jpg",
+    "calories": 350
+  },
+  {
+    "name": "🥗 Korean Kimchi Slaw",
+    "price": 220,
+    "category": "Salads",
+    "description": "Napa cabbage kimchi, shredded carrots, scallions, sesame oil, and gochujang-lime dressing.",
+    "image": "korean-kimchi-slaw.jpg",
+    "calories": 280
   }
 ]
