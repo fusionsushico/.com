@@ -148,31 +148,41 @@ function setupButtons() {
   };
 
   // WhatsApp order button functionality
-  document.getElementById('whatsapp-order').onclick = () => {
+document.getElementById('whatsapp-order').onclick = () => {
     const name = document.getElementById('name-and-phone-number').value;
     const address = document.getElementById('table-number-or-address').value;
 
     if (!name || !address) {
-      alert("Please provide both name and address to place an order.");
-      return;
+        alert("Please provide both name and address to place an order.");
+        return;
     }
 
     let message = 'Order from Fusion Sushi Co.\n';
     let total = 0;
 
     for (let key in cart) {
-      const item = cart[key];
-      message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
-      total += item.qty * item.price;
+        const item = cart[key];
+        message += `\n${item.qty}x ${item.name} – ₹${item.qty * item.price}`;
+        total += item.qty * item.price;
     }
 
     message += `\n\nTotal: ₹${total}`;
     message += `\n\nName: ${name}\nAddress: ${address}`;
 
     const encoded = encodeURIComponent(message);
-
     document.getElementById('whatsapp-order').href = `https://wa.me/919867378209?text=${encoded}`;
-  };
+
+    // ✅ Clear cart after WhatsApp click (small delay for safe redirect)
+    setTimeout(() => {
+        cart = {};
+        localStorage.removeItem('fusionCart');
+        updateCart();
+
+        // Optional: Clear input fields
+        document.getElementById('name-and-phone-number').value = '';
+        document.getElementById('table-number-or-address').value = '';
+    }, 500); // 0.5 second delay to allow WhatsApp to open before clearing
+};
 }
 
 function setActiveTab(id) {
